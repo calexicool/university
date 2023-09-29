@@ -1,5 +1,5 @@
 package javapractice2;
-import java.util.Scanner;
+
 public class Author {
     private String name;
     private String email;
@@ -13,9 +13,8 @@ public class Author {
         return email;
     }
 
-    public void setEmail() {
-        Scanner sc = new Scanner(System.in);
-        email = sc.nextLine();
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 
@@ -28,8 +27,9 @@ public class Author {
         return  name + " (" + gender + ") at " + email;
     }
 
-    public Author(String name,  char gender) {
+    public Author(String name, String email, char gender) {
         this.name = name;
+        this.email = email;
         this.gender = gender;
     }
 }
